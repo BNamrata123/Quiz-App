@@ -1,32 +1,35 @@
-# Space Quiz with Starry Background Animation
+# Space Quiz App
 
-## Overview
+## Description
 
-This is an interactive, web-based space quiz game that challenges users with questions about space, planets, and astronomy. The quiz is set against a visually appealing animated starry night background that enhances the user experience.
+This project is an interactive web-based quiz game themed around space facts and astronomy. It combines an engaging quiz experience with a visually appealing animated starry night background.
 
-## Features
+## Key Features
 
-- **Animated Starry Background:**  
-  A canvas-based animated background with twinkling stars simulating a night sky.
+### Starry Background Animation
+The background is a full-screen canvas with twinkling stars that gently fade in and out to simulate a realistic night sky. The stars continuously animate, creating a calming and immersive outer space atmosphere.
 
-- **Multiple Choice Quiz:**  
-  Five space-related questions with four answer options each.
+### Space Quiz
+Users answer multiple-choice questions about space, planets, and astronomy. Each question has four options, and players select their answer by clicking a button.
 
-- **Timer:**  
-  Each question has a 15-second countdown timer to add a fun challenge.
+### Countdown Timer
+Each question has a 15-second timer displayed at the top, adding a time challenge to the quiz. If the timer runs out, the quiz automatically moves to the next question.
 
-- **Instant Feedback:**  
-  Displays interesting space facts when the user answers correctly.
+### Immediate Feedback and Scoring
+When a user selects the correct answer, a random interesting space fact pops up in a visually distinct fact card, enhancing learning while keeping the game fun. The user's score is updated accordingly.
 
-- **Score Tracking:**  
-  Calculates and displays the final score at the end of the quiz.
+### Result Display
+At the end of the quiz, the final score is shown, indicating how many questions the user answered correctly out of the total.
 
-- **Restart Option:**  
-  Users can restart the quiz anytime to try again.
+### Responsive and Interactive
+The quiz interface dynamically updates with each question, disables answers once selected to prevent multiple clicks, and clearly highlights correct and incorrect choices for better clarity.
 
 ## Technologies Used
 
-- HTML5  
-- CSS3  
-- JavaScript (ES6)  
-- Canvas API for animation
+- **HTML5 & CSS3**: For the basic webpage structure and styling.
+- **JavaScript (ES6)**: To handle quiz logic, timer, starry background animation, and user interactions.
+- **Canvas API**: For creating and animating the starry background effect.
+
+---
+
+Enjoy learning about space in a fun and engaging way!
