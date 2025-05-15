@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🚀 Space Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Canvas for starry background -->
+  <canvas id="stars"></canvas>
+
+  <div class="container">
+    <h1>🚀 Space Quiz</h1>
+
+    <div id="quiz-box">
+      <h2 id="question">Loading question...</h2>
+      <p id="timer">Time left: 15s</p>
+      <div id="options"></div>
+      <!-- Optional Next button can be removed or hidden -->
+    </div>
+
+    <!-- Fact card that flips on correct answer -->
+    <div class="fact-card-container" id="fact-card-container">
+      <div class="fact-card">
+        <div class="front">✅ Correct!</div>
+        <div class="back" id="fact-text">Space Fact</div>
+      </div>
+    </div>
+
+    <!-- Result box -->
+    <div id="result-box" style="display:none;">
+      <h2>Your Score: <span id="score"></span></h2>
+      <button onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fullscreen canvas behind everything */
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: #000011;
+}
+
+/* Container styling */
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: rgba(0, 0, 30, 0.8);
+  color: white;
+  border-radius: 12px;
+  padding: 20px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 20px #00ccff88;
+  text-align: center;
+}
+
+/* Question */
+#question {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* Timer */
+#timer {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #00ffff;
+}
+
+/* Options */
+#options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.option {
+  flex: 1 1 45%;
+  background: #003366;
+  border: 2px solid #00ccff;
+  color: #00ccff;
+  padding: 12px 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.option:hover {
+  background: #00ccff;
+  color: #002233;
+  font-weight: bold;
+}
+
+.option.selected {
+  background: #00ffcc;
+  color: #002233;
+  font-weight: 700;
+  border-color: #00ffcc;
+}
+
+/* Fact card container */
+.fact-card-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 180px;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotateY(0deg);
+  perspective: 1000px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Show fact card */
+.fact-card-container.show {
+  display: flex;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* The card itself */
+.fact-card {
+  width: 320px;
+  height: 180px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #004466, #006688);
+  box-shadow: 0 0 25px #00ccccaa;
+  color: #00ffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 180px;
+  position: relative;
+  cursor: default;
+  user-select: none;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  transform-origin: center;
+}
+
+/* Front and back faces */
+.fact-card .front,
+.fact-card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.fact-card .front {
+  background: #005577;
+  color: #00ffcc;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.fact-card .back {
+  background: #002233;
+  color: #00ccff;
+  transform: rotateY(180deg);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+/* When showing fact, flip the card */
+.fact-card-container.show .fact-card {
+  transform: rotateY(180deg);
+}
+
+/* Result box styling */
+#result-box {
+  color: #00ccff;
+}
+
+#result-box button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  background: #00ccff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #002233;
+  font-weight: 700;
+  transition: background 0.3s ease;
+}
+
+#result-box button:hover {
+  background: #0088aa;
+}
+
+/* Fade in for fact card */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
